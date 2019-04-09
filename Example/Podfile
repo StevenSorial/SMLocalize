@@ -1,0 +1,9 @@
+use_frameworks!
+
+target 'SMLocalize_Example' do
+  pod 'SMLocalize', :path => '../'
+
+  target 'SMLocalize_Tests' do
+    inherit! :search_paths
+  end
+end

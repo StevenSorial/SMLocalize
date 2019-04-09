@@ -1,0 +1,16 @@
+PODS:
+  - SMLocalize (0.1.0)
+
+DEPENDENCIES:
+  - SMLocalize (from `../`)
+
+EXTERNAL SOURCES:
+  SMLocalize:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SMLocalize: 6f6c625ec627d1c6680eb2080466c30512a37084
+
+PODFILE CHECKSUM: 8e85214168dcbf753f6a12aa80d09bf082a4d78c
+
+COCOAPODS: 1.6.1

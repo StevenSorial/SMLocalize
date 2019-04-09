@@ -1,0 +1,6 @@
+framework module SMLocalize {
+  umbrella header "SMLocalize-umbrella.h"
+
+  export *
+  module * { export * }
+}
