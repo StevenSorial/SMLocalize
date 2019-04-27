@@ -1,3 +1,6 @@
+import Foundation
+import UIKit
+
 extension UserDefaults {
   fileprivate enum Keys {
     static let currentLanguage = "SMLocalizeCurrentLanguage"
