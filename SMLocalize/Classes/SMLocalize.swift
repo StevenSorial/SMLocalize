@@ -39,9 +39,9 @@ public class SMLocalize {
   public func configure() {
     guard !didConfigure else { return }
     Bundle.swizzle()
+    didConfigure = true
     let layoutDirection: UISemanticContentAttribute = isCurrentLanguageRTL ? .forceRightToLeft : .forceLeftToRight
     UIView.appearance().semanticContentAttribute = layoutDirection
-    didConfigure = true
   }
 
   private func setCurrentLanguage(_ lang: String) {
