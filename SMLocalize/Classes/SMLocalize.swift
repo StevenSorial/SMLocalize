@@ -15,20 +15,14 @@ public class SMLocalize {
   private var didConfigure = false
 
   var defaultLanguage = Bundle.main.preferredLocalizations.first ?? "en" {
-    didSet {
-      let isRTL = Locale.characterDirection(forLanguage: defaultLanguage) == .rightToLeft
-      let layoutDirection: UISemanticContentAttribute = isRTL ? .forceRightToLeft : .forceLeftToRight
-      UIView.appearance().semanticContentAttribute = layoutDirection
+    willSet {
+      guard !didConfigure else { fatalError("defaultLanguage should be set before calling configure()") }
     }
   }
 
   public var currentLanguage: String {
-    set {
-      setCurrentLanguage(newValue)
-    }
-    get {
-      return getCurrentLanguage()
-    }
+    set { setCurrentLanguage(newValue) }
+    get { return getCurrentLanguage() }
   }
 
   public var isCurrentLanguageRTL: Bool {
@@ -51,6 +45,7 @@ public class SMLocalize {
   }
 
   private func setCurrentLanguage(_ lang: String) {
+    guard didConfigure else { fatalError("SMLocalize is not configured. Please call configure() first.") }
     guard Bundle.main.localizations.contains(lang) else {
       fatalError("Selected language is not included in the app bundle.")
     }
@@ -63,6 +58,7 @@ public class SMLocalize {
   }
 
   private func getCurrentLanguage() -> String {
+    guard didConfigure else { fatalError("SMLocalize is not configured. Please call configure() first.") }
     return UD.standard.string(forKey: UD.Keys.currentLanguage) ?? defaultLanguage
   }
 
