@@ -14,7 +14,7 @@ public class SMLocalize {
   public static let shared = SMLocalize()
   private var didConfigure = false
 
-  var defaultLanguage = Bundle.main.preferredLocalizations.first ?? "en" {
+  public var defaultLanguage = Bundle.main.preferredLocalizations.first ?? "en" {
     willSet {
       guard !didConfigure else { fatalError("defaultLanguage should be set before calling configure()") }
     }
