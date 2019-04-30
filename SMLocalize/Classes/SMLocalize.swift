@@ -7,16 +7,24 @@ extension UserDefaults {
   }
 }
 
+public protocol SMLocalizeReloadableAppDelegate: class where Self: UIApplicationDelegate {
+  func reload()
+}
+
 // swiftlint:disable:next type_name
 private typealias UD = UserDefaults
 
 public class SMLocalize {
   public static let shared = SMLocalize()
+  public static let languageDidChange = Notification.Name(rawValue: "SMLocalizeLanguageDidChange")
   private var didConfigure = false
 
   public var defaultLanguage = Bundle.main.preferredLocalizations.first ?? "en" {
     willSet {
       guard !didConfigure else { fatalError("defaultLanguage should be set before calling configure()") }
+      guard Bundle.main.localizations.contains(newValue) else {
+        fatalError("Selected language is not included in the app bundle.")
+      }
     }
   }
 
@@ -55,6 +63,16 @@ public class SMLocalize {
     UIView.appearance().semanticContentAttribute = layoutDirection
     UD.standard.set(lang, forKey: UD.Keys.currentLanguage)
     UD.standard.synchronize()
+    NotificationCenter.default.post(name: SMLocalize.languageDidChange, object: lang)
+  }
+
+  public func reloadAppDelegate(animation: UIView.AnimationOptions? = nil, duration: TimeInterval = 0.5 ) {
+    guard let delegate = UIApplication.shared.delegate as? SMLocalizeReloadableAppDelegate else {
+        fatalError("AppDelegate does not conform to SMLocalizeReloadableAppDelegate.")
+    }
+    delegate.reload()
+    guard let animation = animation else { return }
+    UIView.transition(with: delegate.window!!, duration: duration, options: animation, animations: nil, completion: nil)
   }
 
   private func getCurrentLanguage() -> String {
