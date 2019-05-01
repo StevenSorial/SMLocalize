@@ -7,7 +7,7 @@ extension UserDefaults {
   }
 }
 
-public protocol SMLocalizeReloadableAppDelegate: class where Self: UIApplicationDelegate {
+public protocol ReloadableAppDelegate: class where Self: UIApplicationDelegate {
   func reload()
 }
 
@@ -67,12 +67,12 @@ public class SMLocalize {
   }
 
   public func reloadAppDelegate(animation: UIView.AnimationOptions? = nil, duration: TimeInterval = 0.5 ) {
-    guard let delegate = UIApplication.shared.delegate as? SMLocalizeReloadableAppDelegate else {
-        fatalError("AppDelegate does not conform to SMLocalizeReloadableAppDelegate.")
+    guard let delegate = UIApplication.shared.delegate as? ReloadableAppDelegate else {
+        fatalError("AppDelegate does not conform to ReloadableAppDelegate.")
     }
     delegate.reload()
-    guard let animation = animation else { return }
-    UIView.transition(with: delegate.window!!, duration: duration, options: animation, animations: nil, completion: nil)
+    guard let animation = animation, let window = delegate.window as? UIWindow else { return }
+    UIView.transition(with: window, duration: duration, options: animation, animations: nil, completion: nil)
   }
 
   private func getCurrentLanguage() -> String {

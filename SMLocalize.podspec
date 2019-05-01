@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SMLocalize'
-  s.version          = '0.3.0'
+  s.version          = '0.3.1'
   s.summary          = 'An iOS Library that changes localization at runtime.'
 
 # This description is used to generate tags and improve search results.
