@@ -80,8 +80,16 @@ public class SMLocalize {
     return UD.standard.string(forKey: UD.Keys.currentLanguage) ?? defaultLanguage
   }
 
-  public func resetLanguageToDefault() {
-    setCurrentLanguage(defaultLanguage)
+  public func resetToDefaultLanguage() {
+    guard didConfigure else { fatalError("SMLocalize is not configured. Please call configure() first.") }
+    let lang = defaultLanguage
+    guard lang != getCurrentLanguage() else { return }
+    let isRTL = Locale.characterDirection(forLanguage: lang) == .rightToLeft
+    let layoutDirection: UISemanticContentAttribute = isRTL ? .forceRightToLeft : .forceLeftToRight
+    UIView.appearance().semanticContentAttribute = layoutDirection
+    UD.standard.removeObject(forKey: UD.Keys.currentLanguage)
+    UD.standard.synchronize()
+    NotificationCenter.default.post(name: SMLocalize.languageDidChange, object: lang)
   }
 }
 
