@@ -1,9 +1,6 @@
-# SMLocalize
+# SMLocalize [![Version](https://img.shields.io/cocoapods/v/SMLocalize.svg?style=flat)](https://cocoapods.org/pods/SMLocalize) [![Swift 5](https://img.shields.io/badge/swift-5.0-orange.svg?style=flat)](https://developer.apple.com/swift/) [![License](https://img.shields.io/github/license/StevenMagdy/SMLocalize.svg?style=flat)](https://cocoapods.org/pods/SMLocalize) [![Platform](https://img.shields.io/cocoapods/p/SMLocalize.svg?style=flat)](https://cocoapods.org/pods/SMLocalize)
 
-[![CI Status](https://img.shields.io/travis/Steven/SMLocalize.svg?style=flat)](https://travis-ci.org/Steven/SMLocalize)
-[![Version](https://img.shields.io/cocoapods/v/SMLocalize.svg?style=flat)](https://cocoapods.org/pods/SMLocalize)
-[![License](https://img.shields.io/cocoapods/l/SMLocalize.svg?style=flat)](https://cocoapods.org/pods/SMLocalize)
-[![Platform](https://img.shields.io/cocoapods/p/SMLocalize.svg?style=flat)](https://cocoapods.org/pods/SMLocalize)
+An iOS library for changing localization at runtime.
 
 ## Example
 
