@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="SMLocalizeExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2v6-JU-VLy">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MqE-Wr-phs">
+                                        <rect key="frame" x="20" y="20" width="374" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="cL2-1e-xvG"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segConChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="u7o-Ir-fVm"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Localized Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pik-v7-S8G">
+                                        <rect key="frame" x="20" y="70" width="374" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="NhY-62-KwJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4xz-FU-XJj">
+                                        <rect key="frame" x="20" y="120" width="374" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YO-rL-bet">
+                                                <rect key="frame" x="0.0" y="0.0" width="184.5" height="100"/>
+                                                <state key="normal" image="LowVolume"/>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HighVolume" translatesAutoresizingMaskIntoConstraints="NO" id="SLt-62-ZG8">
+                                                <rect key="frame" x="189.5" y="0.0" width="184.5" height="100"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="dom-hL-5Yh"/>
+                                        </constraints>
+                                    </stackView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="LowVolume" maximumValueImage="HighVolume" translatesAutoresizingMaskIntoConstraints="NO" id="UFv-3R-FHW">
+                                        <rect key="frame" x="18" y="240" width="378" height="31"/>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="UFv-3R-FHW" firstAttribute="leading" secondItem="2v6-JU-VLy" secondAttribute="leading" constant="20" id="R8I-GR-mwx"/>
+                                    <constraint firstItem="4xz-FU-XJj" firstAttribute="top" secondItem="Pik-v7-S8G" secondAttribute="bottom" constant="20" id="S2U-Ry-naI"/>
+                                    <constraint firstItem="MqE-Wr-phs" firstAttribute="leading" secondItem="2v6-JU-VLy" secondAttribute="leading" constant="20" id="Ts8-7T-lNx"/>
+                                    <constraint firstAttribute="trailing" secondItem="4xz-FU-XJj" secondAttribute="trailing" constant="20" id="UOV-NP-nfb"/>
+                                    <constraint firstAttribute="trailing" secondItem="UFv-3R-FHW" secondAttribute="trailing" constant="20" id="hxf-Sw-8zf"/>
+                                    <constraint firstAttribute="trailing" secondItem="MqE-Wr-phs" secondAttribute="trailing" constant="20" id="j8g-tp-At1"/>
+                                    <constraint firstItem="MqE-Wr-phs" firstAttribute="top" secondItem="2v6-JU-VLy" secondAttribute="top" constant="20" id="rO6-f7-ng9"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pik-v7-S8G" secondAttribute="trailing" constant="20" id="rW5-xf-jaM"/>
+                                    <constraint firstItem="4xz-FU-XJj" firstAttribute="leading" secondItem="2v6-JU-VLy" secondAttribute="leading" constant="20" id="vG8-Wt-LXy"/>
+                                    <constraint firstItem="Pik-v7-S8G" firstAttribute="top" secondItem="MqE-Wr-phs" secondAttribute="bottom" constant="20" id="w3X-Mh-XEq"/>
+                                    <constraint firstItem="UFv-3R-FHW" firstAttribute="top" secondItem="4xz-FU-XJj" secondAttribute="bottom" constant="20" id="xZE-bM-cgf"/>
+                                    <constraint firstItem="Pik-v7-S8G" firstAttribute="leading" secondItem="2v6-JU-VLy" secondAttribute="leading" constant="20" id="yNO-7w-znT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2v6-JU-VLy" secondAttribute="trailing" id="DSa-YO-u3V"/>
+                            <constraint firstItem="2v6-JU-VLy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Gru-oC-p8m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2v6-JU-VLy" secondAttribute="bottom" id="X5R-RE-O1G"/>
+                            <constraint firstItem="2v6-JU-VLy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jdM-2F-MXp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btn" destination="1YO-rL-bet" id="ZyU-dc-0fU"/>
+                        <outlet property="imageView" destination="SLt-62-ZG8" id="PCa-0r-3zt"/>
+                        <outlet property="segCon" destination="MqE-Wr-phs" id="2Hx-JT-kgN"/>
+                        <outlet property="slider" destination="UFv-3R-FHW" id="DvC-M9-luJ"/>
+                        <outlet property="stackView" destination="4xz-FU-XJj" id="KOq-9Z-o8A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="254" y="96"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="HighVolume" width="30" height="30"/>
+        <image name="LowVolume" width="30" height="30"/>
+    </resources>
+</document>

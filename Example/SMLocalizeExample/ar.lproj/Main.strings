@@ -1,0 +1,9 @@
+
+/* Class = "UISegmentedControl"; MqE-Wr-phs.segmentTitles[0] = "First"; ObjectID = "MqE-Wr-phs"; */
+"MqE-Wr-phs.segmentTitles[0]" = "First";
+
+/* Class = "UISegmentedControl"; MqE-Wr-phs.segmentTitles[1] = "Second"; ObjectID = "MqE-Wr-phs"; */
+"MqE-Wr-phs.segmentTitles[1]" = "Second";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Pik-v7-S8G"; */
+"Pik-v7-S8G.text" = "العنوان المترجم";

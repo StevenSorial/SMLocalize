@@ -27,7 +27,7 @@ public enum SMLocalize {
   /// The default language of the app if no language is set yet.
   /// Default is the device curent language or english if not found (very Unlikely).
   ///
-  /// - Warning: Must be called before `SMLocalize.configure()` or else it will cause a crash.
+  /// - Warning: Must be called **before** `SMLocalize.configure()` or else it will cause a crash.
   public static var defaultLanguage = Bundle.main.preferredLocalizations.first ?? "en" {
     willSet {
       guard !didConfigure else { fatalError("defaultLanguage should be set before calling configure()") }
@@ -43,11 +43,13 @@ public enum SMLocalize {
   /// Default is empty.
   ///
   /// - Remark: UIViewController main view tag doesn't have to be changed.
+  /// - Warning: Its highly recommended **not** to include 0 in this set since it will corrupt UIKit.
   public static var flipImagesInViewsWithTags: Set<Int> = []
 
   /// The current selected language. if no language is selected yet, it will return the value of `SMLocalize.defdefaultLanguage`.
   ///
-  /// - Warning: Must be called after `SMLocalize.configure()` or else it will cause a crash.
+  /// - Warning: Must be called **after** `SMLocalize.configure()` or else it will cause a crash.
+  /// - Warning: The new language **must** be included in the app bundle or else it will cause a crash.
   public static var currentLanguage: String {
     set { setCurrentLanguage(newValue) }
     get { return getCurrentLanguage() }
@@ -102,8 +104,8 @@ public enum SMLocalize {
   ///   - animation: Animation Options. Default is nil
   ///   - duration: Animation duration. Default is 0.5
   ///
-  /// - Warning: The appdelegate must conform to `ReloadableAppDelegate` or else it will cause a crash.
-  public static func reloadAppDelegate(animation: UIView.AnimationOptions? = nil, duration: TimeInterval = 0.5 ) {
+  /// - Warning: The appdelegate **must** conform to `ReloadableAppDelegate` or else it will cause a crash.
+  public static func reloadAppDelegate(animation: UIView.AnimationOptions? = nil, duration: TimeInterval = 0.5) {
     guard let delegate = UIApplication.shared.delegate as? ReloadableAppDelegate else {
       fatalError("AppDelegate does not conform to ReloadableAppDelegate.")
     }
@@ -119,7 +121,7 @@ public enum SMLocalize {
 
   /// Resets the the current language to `SMLocalize.defdefaultLanguage`.
   ///
-  /// - Warning: Must be called after `SMLocalize.configure()` or else it will cause a crash.
+  /// - Warning: Must be called **after** `SMLocalize.configure()` or else it will cause a crash.
   public static func resetToDefaultLanguage() {
     guard didConfigure else { fatalError("SMLocalize is not configured. Please call configure() first.") }
     let lang = defaultLanguage
@@ -198,7 +200,7 @@ private func swizzle(_ oldSelector: Selector, with newSelector: Selector, in any
   }
 }
 
-extension UIImage{
+extension UIImage {
   fileprivate var flipped: UIImage {
     return imageFlippedForRightToLeftLayoutDirection()
   }
@@ -212,6 +214,10 @@ extension UIView {
       result.append(contentsOf: $0.allSubViews)
     }
     return result
+  }
+
+  fileprivate func findFirstSubView<T: UIView>(of type: T.Type) -> T? {
+    return allSubViews.first { $0 is T } as? T
   }
 }
 #endif
