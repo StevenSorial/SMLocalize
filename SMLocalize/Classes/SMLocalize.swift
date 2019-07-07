@@ -43,6 +43,7 @@ public enum SMLocalize {
   /// Default is empty.
   ///
   /// - Remark: UIViewController main view tag doesn't have to be changed.
+  /// - Warning: Flipping doesn't work on `UITableViewCell` or `UICollectionViewCell` regardless of its tag.
   /// - Warning: Its highly recommended **not** to include 0 in this set since it will corrupt UIKit.
   public static var flipImagesInViewsWithTags: Set<Int> = []
 
@@ -162,10 +163,13 @@ private func flipImages(in subViews: [UIView]) {
   let applicableTags = SMLocalize.flipImagesInViewsWithTags
   let states: [UIControl.State] = [.normal, .highlighted, .disabled, .selected, .focused, .application, .reserved]
   for subView in subViews where applicableTags.contains(subView.tag) {
+    if subView is UITableViewCell || subView is UICollectionViewCell { continue }
     if let btn = subView as? UIButton {
       states.forEach { btn.setImage(btn.image(for: $0)?.flipped, for: $0) }
     } else if let slider = subView as? UISlider {
       states.forEach { slider.setThumbImage(slider.thumbImage(for: $0)?.flipped, for: $0) }
+      slider.minimumValueImage = slider.minimumValueImage?.flipped
+      slider.maximumValueImage = slider.maximumValueImage?.flipped
     } else if let imgView = subView as? UIImageView {
       imgView.image = imgView.image?.flipped
     }

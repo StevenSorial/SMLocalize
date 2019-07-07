@@ -61,9 +61,16 @@
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="LowVolume" maximumValueImage="HighVolume" translatesAutoresizingMaskIntoConstraints="NO" id="UFv-3R-FHW">
                                         <rect key="frame" x="18" y="240" width="378" height="31"/>
                                     </slider>
+                                    <tableView clipsSubviews="YES" tag="3" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8bO-vt-tTw">
+                                        <rect key="frame" x="20" y="290" width="374" height="508"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="8bO-vt-tTw" secondAttribute="bottom" constant="20" id="18n-OR-zAe"/>
+                                    <constraint firstItem="8bO-vt-tTw" firstAttribute="leading" secondItem="2v6-JU-VLy" secondAttribute="leading" constant="20" id="8Sa-VN-oJj"/>
+                                    <constraint firstAttribute="trailing" secondItem="8bO-vt-tTw" secondAttribute="trailing" constant="20" id="OOE-bo-ND0"/>
                                     <constraint firstItem="UFv-3R-FHW" firstAttribute="leading" secondItem="2v6-JU-VLy" secondAttribute="leading" constant="20" id="R8I-GR-mwx"/>
                                     <constraint firstItem="4xz-FU-XJj" firstAttribute="top" secondItem="Pik-v7-S8G" secondAttribute="bottom" constant="20" id="S2U-Ry-naI"/>
                                     <constraint firstItem="MqE-Wr-phs" firstAttribute="leading" secondItem="2v6-JU-VLy" secondAttribute="leading" constant="20" id="Ts8-7T-lNx"/>
@@ -76,6 +83,7 @@
                                     <constraint firstItem="Pik-v7-S8G" firstAttribute="top" secondItem="MqE-Wr-phs" secondAttribute="bottom" constant="20" id="w3X-Mh-XEq"/>
                                     <constraint firstItem="UFv-3R-FHW" firstAttribute="top" secondItem="4xz-FU-XJj" secondAttribute="bottom" constant="20" id="xZE-bM-cgf"/>
                                     <constraint firstItem="Pik-v7-S8G" firstAttribute="leading" secondItem="2v6-JU-VLy" secondAttribute="leading" constant="20" id="yNO-7w-znT"/>
+                                    <constraint firstItem="8bO-vt-tTw" firstAttribute="top" secondItem="UFv-3R-FHW" secondAttribute="bottom" constant="20" id="zja-EX-EMv"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -94,6 +102,7 @@
                         <outlet property="segCon" destination="MqE-Wr-phs" id="2Hx-JT-kgN"/>
                         <outlet property="slider" destination="UFv-3R-FHW" id="DvC-M9-luJ"/>
                         <outlet property="stackView" destination="4xz-FU-XJj" id="KOq-9Z-o8A"/>
+                        <outlet property="tableView" destination="8bO-vt-tTw" id="ZjN-0C-0fB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

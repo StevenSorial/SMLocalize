@@ -1,0 +1,8 @@
+/* 
+  Localizable.strings
+  SMLocalizeExample
+
+  Created by Steven on 7/6/19.
+  Copyright © 2019 Steven. All rights reserved.
+*/
+"list_item" = "Élément de liste";

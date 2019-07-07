@@ -13,6 +13,9 @@
 		B07ADC1022D069F20018F3CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B07ADC0E22D069F20018F3CB /* Main.storyboard */; };
 		B07ADC1222D069F40018F3CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B07ADC1122D069F40018F3CB /* Assets.xcassets */; };
 		B07ADC1522D069F40018F3CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B07ADC1322D069F40018F3CB /* LaunchScreen.storyboard */; };
+		B0938E9622D09BA000D5EAB0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0938E9422D09BA000D5EAB0 /* Localizable.strings */; };
+		B0938E9A22D09E9000D5EAB0 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0938E9922D09E9000D5EAB0 /* TableViewCell.xib */; };
+		B0938E9C22D09F0500D5EAB0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0938E9B22D09F0500D5EAB0 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,11 @@
 		B07ADC1122D069F40018F3CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B07ADC1422D069F40018F3CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B07ADC1622D069F40018F3CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0938E9522D09BA000D5EAB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B0938E9722D09BCB00D5EAB0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B0938E9822D09BCD00D5EAB0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B0938E9922D09E9000D5EAB0 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		B0938E9B22D09F0500D5EAB0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		E2C15B47D3F91BDF5FB12246 /* Pods-SMLocalizeExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMLocalizeExample.debug.xcconfig"; path = "Target Support Files/Pods-SMLocalizeExample/Pods-SMLocalizeExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +94,9 @@
 				B07ADC1122D069F40018F3CB /* Assets.xcassets */,
 				B07ADC1322D069F40018F3CB /* LaunchScreen.storyboard */,
 				B07ADC1622D069F40018F3CB /* Info.plist */,
+				B0938E9422D09BA000D5EAB0 /* Localizable.strings */,
+				B0938E9922D09E9000D5EAB0 /* TableViewCell.xib */,
+				B0938E9B22D09F0500D5EAB0 /* TableViewCell.swift */,
 			);
 			path = SMLocalizeExample;
 			sourceTree = "<group>";
@@ -153,6 +164,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B07ADC1522D069F40018F3CB /* LaunchScreen.storyboard in Resources */,
+				B0938E9A22D09E9000D5EAB0 /* TableViewCell.xib in Resources */,
+				B0938E9622D09BA000D5EAB0 /* Localizable.strings in Resources */,
 				B07ADC1222D069F40018F3CB /* Assets.xcassets in Resources */,
 				B07ADC1022D069F20018F3CB /* Main.storyboard in Resources */,
 			);
@@ -207,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0938E9C22D09F0500D5EAB0 /* TableViewCell.swift in Sources */,
 				B07ADC0D22D069F20018F3CB /* ViewController.swift in Sources */,
 				B07ADC0B22D069F20018F3CB /* AppDelegate.swift in Sources */,
 			);
@@ -231,6 +245,16 @@
 				B07ADC1422D069F40018F3CB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B0938E9422D09BA000D5EAB0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0938E9522D09BA000D5EAB0 /* Base */,
+				B0938E9722D09BCB00D5EAB0 /* ar */,
+				B0938E9822D09BCD00D5EAB0 /* fr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -288,7 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -344,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -361,6 +385,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SMLocalizeExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,6 +404,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SMLocalizeExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

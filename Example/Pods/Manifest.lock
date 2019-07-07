@@ -1,5 +1,5 @@
 PODS:
-  - SMLocalize (0.4.0)
+  - SMLocalize (0.5.0)
 
 DEPENDENCIES:
   - SMLocalize (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SMLocalize: a7c08199c19538d2dc0a1d87ef6d88533dd194c8
+  SMLocalize: ff71ef9998588e7dfe09a283ca7b1911a8484e06
 
 PODFILE CHECKSUM: 0f09b4e1e068387ca9180ffc34f2ee18fa609b53
 

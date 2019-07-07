@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		1A0DF687E39F831EAAC7A484E43F6586 /* Pods-SMLocalizeExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 708A10A835CA82ABCDD39BF4A3237665 /* Pods-SMLocalizeExample-dummy.m */; };
 		6A04048C242DECC90B6B28A32C50AA8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		7AD00BFFCAF580C8013B53682308C157 /* SMLocalize-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EB7227B9E53869558329092482191EA /* SMLocalize-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		88668001BD4501E2CE66A4E5DEB2657C /* SMLocalize-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C36ACE97096CC8DC6F1544ECB8517D /* SMLocalize-dummy.m */; };
-		9BC71047AA2759722FF8C2C535A234E4 /* SMLocalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD95B073C9F9D8066DEBD09AFB53C5B /* SMLocalize.swift */; };
+		7AD00BFFCAF580C8013B53682308C157 /* SMLocalize-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC7C3E8BABCC7B6095722547151EFDE9 /* SMLocalize-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88668001BD4501E2CE66A4E5DEB2657C /* SMLocalize-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 567E942C64CF668E7A53BF7D7FEBAE90 /* SMLocalize-dummy.m */; };
+		9BC71047AA2759722FF8C2C535A234E4 /* SMLocalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543F86DB41B207B19B696D55180402DC /* SMLocalize.swift */; };
 		A675FEA789338D81923443FB65FC182F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		EE14200A3B2CE9D1E13B15C83E96F227 /* Pods-SMLocalizeExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A02775DB28F3FCCE1A53E8B582CFA85 /* Pods-SMLocalizeExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -27,29 +27,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00192ABFDED185E7F4C058B94296B135 /* SMLocalize-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SMLocalize-prefix.pch"; sourceTree = "<group>"; };
 		00B43911C2815BA2FA69EC54F306E12A /* Pods-SMLocalizeExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SMLocalizeExample.modulemap"; sourceTree = "<group>"; };
 		09D9C81FDB769DB00FB2936394043692 /* Pods-SMLocalizeExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SMLocalizeExample.debug.xcconfig"; sourceTree = "<group>"; };
+		0EE2B4874B24CE400EA14BBBB55CCC92 /* SMLocalize.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SMLocalize.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		25CFD2F8DD4C7FEC51C41B70153FA61A /* Pods-SMLocalizeExample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SMLocalizeExample-Info.plist"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		35D2B448AE36AD151B4B5F7CD8902485 /* Pods_SMLocalizeExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SMLocalizeExample.framework; path = "Pods-SMLocalizeExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		38FC972318B95B986DF256D215BC45B6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		51AF62C8CBA8347380EFEB45CE986829 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		4D3AA89F3E60CB63616D8EC17A0AF041 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		543F86DB41B207B19B696D55180402DC /* SMLocalize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMLocalize.swift; path = SMLocalize/Classes/SMLocalize.swift; sourceTree = "<group>"; };
+		567E942C64CF668E7A53BF7D7FEBAE90 /* SMLocalize-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SMLocalize-dummy.m"; sourceTree = "<group>"; };
 		5A0E1B34F70716F0268D1BBD24EBABFE /* Pods-SMLocalizeExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SMLocalizeExample-frameworks.sh"; sourceTree = "<group>"; };
+		64B7445A764D28B3D1D4678D3032CB40 /* SMLocalize.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SMLocalize.modulemap; sourceTree = "<group>"; };
+		66642E5AA28A587311D6AAD970FEF7E0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		671B7DE4F450159F8628ADA03F8543D5 /* Pods-SMLocalizeExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SMLocalizeExample.release.xcconfig"; sourceTree = "<group>"; };
 		708A10A835CA82ABCDD39BF4A3237665 /* Pods-SMLocalizeExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SMLocalizeExample-dummy.m"; sourceTree = "<group>"; };
-		75C36ACE97096CC8DC6F1544ECB8517D /* SMLocalize-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SMLocalize-dummy.m"; sourceTree = "<group>"; };
 		8A02775DB28F3FCCE1A53E8B582CFA85 /* Pods-SMLocalizeExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SMLocalizeExample-umbrella.h"; sourceTree = "<group>"; };
+		8DE20B3FCC89E4482B96F09EEB4AE59E /* SMLocalize.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SMLocalize.xcconfig; sourceTree = "<group>"; };
 		90B8AA0BFFA5259C606ABEEA9D328FAC /* Pods-SMLocalizeExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SMLocalizeExample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9EB7227B9E53869558329092482191EA /* SMLocalize-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SMLocalize-umbrella.h"; sourceTree = "<group>"; };
-		A15F10456F5C5507D9C766149F1D2701 /* SMLocalize-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SMLocalize-Info.plist"; sourceTree = "<group>"; };
-		D66C9ECE0D33542638B0255E4E420F50 /* SMLocalize.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SMLocalize.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CB27FC6B7D1EEA20355DECEFEBADE997 /* SMLocalize-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SMLocalize-Info.plist"; sourceTree = "<group>"; };
 		DAC84DBD5D0068FFEE74198C10441B6E /* SMLocalize.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SMLocalize.framework; path = SMLocalize.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E59C8C53245AED004F00316F352BBE46 /* Pods-SMLocalizeExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SMLocalizeExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		E7EA493E36E85EBB93483C935D6E1AE7 /* SMLocalize.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SMLocalize.xcconfig; sourceTree = "<group>"; };
-		F8BAB8C621309B89E022D5731D4D9A7A /* SMLocalize.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SMLocalize.modulemap; sourceTree = "<group>"; };
-		FAD95B073C9F9D8066DEBD09AFB53C5B /* SMLocalize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SMLocalize.swift; path = SMLocalize/Classes/SMLocalize.swift; sourceTree = "<group>"; };
-		FAF645F862F28D3D635C5958CDA73B4D /* SMLocalize-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SMLocalize-prefix.pch"; sourceTree = "<group>"; };
+		EC7C3E8BABCC7B6095722547151EFDE9 /* SMLocalize-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SMLocalize-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,47 +98,47 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		78C5FC54BCC34D61A7EFCDFB54A8238A /* Support Files */ = {
+		3C59558D0923386437CFD57BB13EEAF5 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				F8BAB8C621309B89E022D5731D4D9A7A /* SMLocalize.modulemap */,
-				E7EA493E36E85EBB93483C935D6E1AE7 /* SMLocalize.xcconfig */,
-				75C36ACE97096CC8DC6F1544ECB8517D /* SMLocalize-dummy.m */,
-				A15F10456F5C5507D9C766149F1D2701 /* SMLocalize-Info.plist */,
-				FAF645F862F28D3D635C5958CDA73B4D /* SMLocalize-prefix.pch */,
-				9EB7227B9E53869558329092482191EA /* SMLocalize-umbrella.h */,
+				4D3AA89F3E60CB63616D8EC17A0AF041 /* LICENSE */,
+				66642E5AA28A587311D6AAD970FEF7E0 /* README.md */,
+				0EE2B4874B24CE400EA14BBBB55CCC92 /* SMLocalize.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		4A5E016B24DB13F026C541A2EB3A6605 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				64B7445A764D28B3D1D4678D3032CB40 /* SMLocalize.modulemap */,
+				8DE20B3FCC89E4482B96F09EEB4AE59E /* SMLocalize.xcconfig */,
+				567E942C64CF668E7A53BF7D7FEBAE90 /* SMLocalize-dummy.m */,
+				CB27FC6B7D1EEA20355DECEFEBADE997 /* SMLocalize-Info.plist */,
+				00192ABFDED185E7F4C058B94296B135 /* SMLocalize-prefix.pch */,
+				EC7C3E8BABCC7B6095722547151EFDE9 /* SMLocalize-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "SMLocalizeExample/Pods/Target Support Files/SMLocalize";
+			path = "Example/Pods/Target Support Files/SMLocalize";
+			sourceTree = "<group>";
+		};
+		69541F2AA8E6BE0301FEEE85D597695C /* SMLocalize */ = {
+			isa = PBXGroup;
+			children = (
+				543F86DB41B207B19B696D55180402DC /* SMLocalize.swift */,
+				3C59558D0923386437CFD57BB13EEAF5 /* Pod */,
+				4A5E016B24DB13F026C541A2EB3A6605 /* Support Files */,
+			);
+			name = SMLocalize;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		7A325341903F9C304C97790A0E9C48BF /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8A5937C042F9AD050D7357DAE339640A /* SMLocalize */,
+				69541F2AA8E6BE0301FEEE85D597695C /* SMLocalize */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		87307DEC4EAF172E92B4FD3370CB311C /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				51AF62C8CBA8347380EFEB45CE986829 /* LICENSE */,
-				38FC972318B95B986DF256D215BC45B6 /* README.md */,
-				D66C9ECE0D33542638B0255E4E420F50 /* SMLocalize.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		8A5937C042F9AD050D7357DAE339640A /* SMLocalize */ = {
-			isa = PBXGroup;
-			children = (
-				FAD95B073C9F9D8066DEBD09AFB53C5B /* SMLocalize.swift */,
-				87307DEC4EAF172E92B4FD3370CB311C /* Pod */,
-				78C5FC54BCC34D61A7EFCDFB54A8238A /* Support Files */,
-			);
-			name = SMLocalize;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		9363CAD649B09FCAD232F82C0F74E035 /* Targets Support Files */ = {
@@ -413,7 +413,7 @@
 		};
 		269BC62DC4F2A03C713AAC780B7D66F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7EA493E36E85EBB93483C935D6E1AE7 /* SMLocalize.xcconfig */;
+			baseConfigurationReference = 8DE20B3FCC89E4482B96F09EEB4AE59E /* SMLocalize.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -508,7 +508,7 @@
 		};
 		67D8F5B52E7565459662EDA789C04CF6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7EA493E36E85EBB93483C935D6E1AE7 /* SMLocalize.xcconfig */;
+			baseConfigurationReference = 8DE20B3FCC89E4482B96F09EEB4AE59E /* SMLocalize.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
