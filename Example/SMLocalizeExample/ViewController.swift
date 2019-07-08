@@ -50,20 +50,27 @@ class ViewController: UIViewController {
   }
 
   func setupTagsForFlipping() {
-    view.subviews.first!.tag = 1 // allow slipping in the first subview.
+    view.subviews.first!.tag = 1 // allow flipping images in the first subview.
     stackView.tag = 2
     btn.tag = 3
-    imageView.tag = 11 // Exclude it from flipping.
+    imageView.tag = 11 // Exclude it from image flipping.
     SMLocalize.flipImagesInViewsWithTags.insert(15) // add 15 to tags to flip.
     slider.tag = 15 // allow the slider to flip its images.
   }
 
   @IBAction
   func segConChanged(_ sender: UISegmentedControl) {
-    let lang = AppLangs.allCases[sender.selectedSegmentIndex]
-    SMLocalize.currentLanguage = lang.rawValue
-    let willAnimate = Bool.random()
-    SMLocalize.reloadAppDelegate(animation: willAnimate ? .transitionFlipFromRight : nil, duration: 0.5)
+    // Plays an animation based on the new language direction.
+    // If the new language is the same direction as the previous one, No animation.
+    let isPrevLangRTL = SMLocalize.isCurrentLanguageRTL
+    let newLang = AppLangs.allCases[sender.selectedSegmentIndex]
+    SMLocalize.currentLanguage = newLang.rawValue
+    let isNewRTL = SMLocalize.isCurrentLanguageRTL
+    let willDoAnimation = isNewRTL != isPrevLangRTL
+    let potentialAnimation: UIView.AnimationOptions = isNewRTL
+      ? .transitionFlipFromRight : .transitionFlipFromLeft
+    let animation: UIView.AnimationOptions? = willDoAnimation ? [potentialAnimation, .curveEaseOut] : nil
+    SMLocalize.reloadAppDelegate(animation: animation, duration: 0.4)
   }
 }
 
@@ -82,7 +89,7 @@ extension ViewController: UITableViewDataSource {
   }
 }
 
-enum AppLangs:String, CaseIterable{
+enum AppLangs: String, CaseIterable {
   case english = "en"
   case french = "fr"
   case arabic = "ar"
