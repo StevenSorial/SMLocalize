@@ -46,9 +46,7 @@ class ViewController: UIViewController {
 ...
 @IBAction func changeLanguageTapped(_ sender: UIButton) {
   SMLocalize.currentLanguage = "ar" // Your new language
-  // Optional animation. Change to nil if not needed.
-  let animation = UIView.AnimationOptions.transitionFlipFromRight
-  SMLocalize.reloadAppDelegate(animation: animation, duration: 0.5)
+  SMLocalize.reloadAppDelegate()
   }
 }
 ```
@@ -154,6 +152,25 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'SMLocalize'
 ```
+
+## TODO
+
+- [ ] Support installation through Carthage & Swift Package Manager (Help Needed)
+- [ ] Localize Views with Text automatically
+- [ ] Improve the library API?
+
+## Credit
+
+### Other Libraries
+SMLocalize was inspired by these libraries. Uses the same techniques in some parts and deviates in others.
+
+- [MOLH](https://github.com/MoathOthman/MOLH)
+- [Localize-Swift](https://github.com/marmelroy/Localize-Swift)
+- [LanguageManager-iOS](https://github.com/Abedalkareem/LanguageManager-iOS)
+
+### Articles
+
+- [Forcing iOS localization at runtime — the right way](https://medium.com/swift2go/forcing-ios-localization-at-runtime-the-right-way-8afa0569162a) (by [Eldar Eliav](https://github.com/eldare))
 
 ## Author
 
