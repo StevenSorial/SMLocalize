@@ -161,6 +161,7 @@ extension UIViewController {
 
 private func flipImages(in subViews: [UIView]) {
   let applicableTags = SMLocalize.flipImagesInViewsWithTags
+  guard !applicableTags.isEmpty else { return }
   let states: [UIControl.State] = [.normal, .highlighted, .disabled, .selected, .focused, .application, .reserved]
   for subView in subViews where applicableTags.contains(subView.tag) {
     if subView is UITableViewCell || subView is UICollectionViewCell { continue }
@@ -220,8 +221,9 @@ extension UIView {
     return result
   }
 
-  fileprivate func findFirstSubView<T: UIView>(of type: T.Type) -> T? {
-    return allSubViews.first { $0 is T } as? T
+  fileprivate func firstSubView<T: UIView>(of type: T.Type) -> T? {
+    guard let found = allSubViews.first (where: { $0 is T }) else { return nil }
+    return (found as! T)
   }
 }
 #endif
