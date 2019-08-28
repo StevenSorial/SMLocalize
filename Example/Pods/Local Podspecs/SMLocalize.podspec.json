@@ -1,6 +1,6 @@
 {
   "name": "SMLocalize",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "summary": "An iOS library for changing localization at runtime.",
   "description": "An iOS library for changing localization at runtime.",
   "homepage": "https://github.com/StevenMagdy/SMLocalize",
@@ -14,7 +14,7 @@
   "swift_versions": "5.0",
   "source": {
     "git": "https://github.com/StevenMagdy/SMLocalize.git",
-    "tag": "0.5.0"
+    "tag": "0.5.1"
   },
   "platforms": {
     "ios": "9.0"
