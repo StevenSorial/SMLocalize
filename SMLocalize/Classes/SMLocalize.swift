@@ -1,4 +1,4 @@
-#if os(iOS)
+#if canImport(UIKit)
 import Foundation
 import UIKit
 
@@ -78,6 +78,7 @@ public enum SMLocalize {
     let bundleClass = Bundle.self
     swizzle(#selector(bundleClass.localizedString(forKey:value:table:)), with: #selector(bundleClass.smSwizzledLocalizedString(forKey:value:table:)), in: bundleClass)
     let vcClass = UIViewController.self
+    swizzle(#selector(vcClass.viewDidLoad), with: #selector(vcClass.smSwizzledviewViewDidLoad), in: vcClass)
     swizzle(#selector(vcClass.viewDidLayoutSubviews), with: #selector(vcClass.smSwizzledviewDidLayoutSubviews), in: vcClass)
     didConfigure = true
     let layoutDirection: UISemanticContentAttribute = isCurrentLanguageRTL ? .forceRightToLeft : .forceLeftToRight
@@ -152,6 +153,14 @@ extension Bundle {
 }
 
 extension UIViewController {
+
+  @objc
+  fileprivate func smSwizzledviewViewDidLoad() {
+    self.smSwizzledviewViewDidLoad()
+    // Fix for interactivePopGestureRecognizer direction
+    view.semanticContentAttribute = SMLocalize.isCurrentLanguageRTL ? .forceRightToLeft : .forceLeftToRight
+  }
+
   @objc
   fileprivate func smSwizzledviewDidLayoutSubviews() {
     self.smSwizzledviewDidLayoutSubviews()
